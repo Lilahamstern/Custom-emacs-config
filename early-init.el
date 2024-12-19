@@ -91,6 +91,8 @@
  inhibit-startup-echo-area-message user-login-name
  inhibit-startup-buffer-menu t)
 
+;; Remove macos bar but keep round corners
+(add-to-list 'default-frame-alist '(undecorated-round .t))
 
 ;; Disable all graphical elements
 (blink-cursor-mode 1)
