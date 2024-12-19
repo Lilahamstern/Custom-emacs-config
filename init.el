@@ -58,3 +58,4 @@
 ;; Packages I mean why not
 (require 'tnh-emacs-elisp)
 (require 'tnh-emacs-vertico)
+(require 'tnh-emacs-which-key)
