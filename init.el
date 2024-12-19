@@ -54,3 +54,6 @@
 ;; Modeline and icons for the win
 (require 'tnh-emacs-icons)
 (require 'tnh-emacs-modeline)
+
+;; Packages I mean why not
+(require 'tnh-emacs-elisp)
