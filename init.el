@@ -59,3 +59,4 @@
 (require 'tnh-emacs-elisp)
 (require 'tnh-emacs-vertico)
 (require 'tnh-emacs-which-key)
+(require 'tnh-emacs-git)
