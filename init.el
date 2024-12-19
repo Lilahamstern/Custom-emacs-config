@@ -57,3 +57,4 @@
 
 ;; Packages I mean why not
 (require 'tnh-emacs-elisp)
+(require 'tnh-emacs-vertico)
