@@ -20,18 +20,37 @@
    package-archive-priorities
    '(("gnu-elpa" . 200)
      ("melpa" . 150)
-("melpa-stable" . 100)
-("nongnu" . 50)))
-(package-initialize)
-(unless package-archive-contents
-(package-refresh-contents))
-(unless
-(package-installed-p 'use-package)
-(package-install 'use-package))
-(require 'use-package)
-(put 'use-package 'lisp-indent-function 1)
-(use-package
-   use-package-core
-   :custom
-(use-package-minimum-reported-time 0.005)
-(use-package-enable-imenu-support t)))
+     ("melpa-stable" . 100)
+     ("nongnu" . 50)))
+  (package-initialize)
+  (unless package-archive-contents
+    (package-refresh-contents))
+  (unless (package-installed-p 'use-package)
+    (package-install 'use-package))
+  (require 'use-package)
+  (put 'use-package 'lisp-indent-function 1)
+  (use-package
+      use-package-core
+    :custom
+    (use-package-minimum-reported-time 0.005)
+    (use-package-enable-imenu-support t)))
+
+;; Theme
+(use-package doom-themes
+  :ensure t
+  :custom
+  (doom-themes-enable-bold t)
+  (doom-themes-enable-italic t)
+  :config
+  (load-theme 'doom-tokyo-night t)
+  (doom-themes-org-config))
+
+;; Custom functions
+(require 'tnh-emacs-functions)
+
+;; Baseline
+(require 'tnh-emacs-base)
+
+;; Modeline and icons for the win
+(require 'tnh-emacs-icons)
+(require 'tnh-emacs-modeline)
